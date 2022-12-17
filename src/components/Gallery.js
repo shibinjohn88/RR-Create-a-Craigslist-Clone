@@ -4,9 +4,9 @@ function Gallery (props) {
     return (
         <div className="gallery">
             <h1> Gallery of items</h1>
-            {props.postings.map ( (p) => {
+            {props.postings.map ( (p,i) => {
                 return (
-                    <Posting posting={p}/>
+                    <Posting posting={p} key={i}/>
                 )
             }
             )}
